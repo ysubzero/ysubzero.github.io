@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <style>
         body {
-        background-color: #222222;
+        background-color: #333333;
         color: white;
         font-size:16px;
         font-family: monospace;
         margin: 1;
         padding: 1;
         }
+        #loading
+        {
+          display: block;
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin:auto;
+        }
+        #content
+        {
+          display: none; 
+        }
     </style>
 </head>   
 <body>
+    <canvas id="loading"></canvas>
+    <script src="loading.js"></script>
+    <div id="content">
     <p>I haven't done any cool stuff yet. Please come back when I do.</p>
+
+    <canvas id="canvas"></canvas>
+    <script src="donut.js"></script>
+
+    <br>
+
     <a href="index.html">
         <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">Back</button>
     </a>
+    </div>
 </body>

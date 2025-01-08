@@ -1,7 +1,5 @@
-(function()
-{
-
-const canvas = document.getElementById("canvas");
+(function() {
+const canvas = document.getElementById("loading");
 const ctx = canvas.getContext("2d");
 
 const width = 160;
@@ -20,6 +18,8 @@ const incrementSpeed = 0.5;
 let A = 0;
 let B = 0;
 let C = 0;
+
+let animationRunning = true;
 
 let zBuffer = new Array(width * height).fill(0.0);
 let buffer = new Array(width * height).fill('.');
@@ -66,7 +66,13 @@ function calculate_surface(cubeX, cubeY, cubeZ, ch) {
     }
 }
 
-function animate2() {
+function animate() {
+    if (!animationRunning) 
+        {
+            canvas.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            return;
+        }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     buffer.fill(backgroundASCIICode);
     zBuffer.fill(0.0);
@@ -82,7 +88,7 @@ function animate2() {
         }
     }
 
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "white";
     let output = buffer.join("");
     ctx.font = "16px monospace";
     let rows = output.match(/.{1,80}/g);
@@ -90,12 +96,18 @@ function animate2() {
         ctx.fillText(row, 10, 20 + index * 16);
     });
 
-    A += 0.01;
-    B += 0.01;
+    A += 0.05;
+    B += 0.05;
     C += 0;
 
-    requestAnimationFrame(animate2);
+    requestAnimationFrame(animate);
 }
 
-animate2();
+setTimeout(() => 
+{
+    animationRunning = false;
+
+}, 500);
+
+animate();
 })();

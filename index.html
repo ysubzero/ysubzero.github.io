@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-        background-color: #222222;
+        background-color: #333333;
         color: white;
         font-size:16x;
         font-family: monospace;
         margin: 1;
         padding: 1;
         }
+        #loading
+        {
+          display: block;
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin:auto;
+        }
+        #content 
+        {
+          display: none; 
+        }
     </style>
 </head>    
     <body>
-        <pre>
+          <canvas id="loading"></canvas>
+          <div id="content">
+            <pre>
 I am
                                                                                          
 `YMM'   `MM' .M"""bgd `7MMF'   `7MF'`7MM"""Yp, MMM"""AMV `7MM"""YMM  `7MM"""Mq.    .g8""8q.   
@@ -71,20 +89,22 @@ And I do stuff for fun.
                                             +%%=.                                         
                                               :+#%*=:                                     
         </pre>
-<a href="https://github.com/ysubzero">
-    <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">GitHub</button>
-</a>
-<br>
-<a href="https://www.youtube.com/@Jandy__">
-    <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">Youtube</button>
-</a>
-<br>
-<a href="coolstuff.html">
-    <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">Cool Stuff I've Done</button>
-</a>
-<br>
-<a href="aboutme.html">
-    <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">About Me</button>
-</a>
+        <a href="aboutme.html">
+        <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">About Me</button>
+        </a>
+        <br>
+        <a href="coolstuff.html">
+          <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">Cool Stuff</button>
+          </a>
+        <br>
+        <a href="https://github.com/ysubzero">
+        <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">GitHub</button>
+        </a>
+        <br>
+        <a href="https://www.youtube.com/@Jandy__">
+        <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">YouTube</button>
+        </a>
+                </div>
+                <script src="loading.js"></script>
     </body>
 </html>

@@ -2,20 +2,39 @@
 <head>
     <style>
         body {
-        background-color: #222222;
+        background-color: #333333;
         color: white;
         font-size:16px;
         font-family: monospace;
         margin: 1;
         padding: 1;
         }
+        #loading
+        {
+          display: block;
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin:auto;
+        }
+        #content 
+        {
+          display: none; 
+        }
     </style>
 </head>   
 <body>
-    <p>I am [redacted], a first-year Physics student from [redacted]. I am from the Philippines.</p>
+    <canvas id="loading"></canvas>
+    <div id="content">
+    <p>I am [redacted], a first-year Physics student from [redacted] and I am from the Philippines. I am currently focusing my efforts on plasma physics and computational fluid dynamics.</p>
+    <P>I specialize in C++ and Python, and I am currently working on computational simulations.</P>
     <p>If you need more information about me, please contact me via email:</p>
     <p>eljandy42@gmail.com</p>
     <a href="index.html">
         <button style="font-size:25px; background-color:#454545; color:white;  font-family: monospace; border-radius:25px">Back</button>
     </a>
+    </div>
+    <script src="loading.js"></script>
 </body>
