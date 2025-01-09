@@ -82,7 +82,7 @@ function animate2() {
         }
     }
 
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "white";
     let output = buffer.join("");
     ctx.font = "16px monospace";
     let rows = output.match(/.{1,80}/g);
